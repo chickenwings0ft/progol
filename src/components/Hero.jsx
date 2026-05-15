@@ -12,14 +12,14 @@ export default function Hero() {
   return (
     <section
       id="hero"
-      aria-label="ProGoal — Porterías de entrenamiento profesional"
+      aria-label="ProGol — Porterías de entrenamiento profesional"
       className="hero-section"
     >
       {/* ══ MOBILE: image block on top ══ */}
       <div className="hero-img-mobile">
         <motion.img
           src="/Imagenes/Main image - NEW.jpg"
-          alt="Portería ProGoal Sports — aluminio aeroespacial, entrenamiento profesional de fútbol"
+          alt="Portería ProGol Sports — aluminio aeroespacial, entrenamiento profesional de fútbol"
           initial={{ scale: 1.06, opacity: 0 }}
           animate={{ scale: 1, opacity: 1 }}
           transition={{ duration: 1, ease: 'easeOut' }}
@@ -35,7 +35,7 @@ export default function Hero() {
       >
         <img
           src="/Imagenes/Main image - NEW.jpg"
-          alt="Portería ProGoal Sports — aluminio aeroespacial, entrenamiento profesional de fútbol"
+          alt="Portería ProGol Sports — aluminio aeroespacial, entrenamiento profesional de fútbol"
         />
         <div className="hero-img-desktop-fade" />
       </motion.div>

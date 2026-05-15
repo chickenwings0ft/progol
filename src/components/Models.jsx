@@ -69,7 +69,7 @@ export default function Models() {
           </motion.div>
           <motion.h2 id="models-heading" className="section-title"
             initial={{ opacity: 0, y: 20 }} animate={inView ? { opacity: 1, y: 0 } : {}} transition={{ delay: 0.1 }}>
-            Encuentra tu modelo ProGoal
+            Encuentra tu modelo ProGol
           </motion.h2>
           <motion.p initial={{ opacity: 0 }} animate={inView ? { opacity: 1 } : {}} transition={{ delay: 0.2 }}
             style={{ marginTop: 12, color: '#888', fontSize: 14, fontWeight: 500, maxWidth: 520, margin: '12px auto 0' }}>
@@ -118,7 +118,7 @@ export default function Models() {
           viewport={{ once: true }} transition={{ delay: 0.2 }}
           style={{ marginTop: 56, overflowX: 'auto' }}>
           <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: 13, fontWeight: 500 }}
-            aria-label="Tabla de especificaciones técnicas ProGoal — tamaños y precios">
+            aria-label="Tabla de especificaciones técnicas ProGol — tamaños y precios">
             <caption style={{ fontFamily: 'Orbitron, sans-serif', fontSize: 10, fontWeight: 700, letterSpacing: '0.2em', textTransform: 'uppercase', color: '#c9a84c', paddingBottom: 16, textAlign: 'left' }}>
               Especificaciones técnicas
             </caption>

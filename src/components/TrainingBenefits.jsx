@@ -6,7 +6,7 @@ const benefits = [
   {
     icon: Target,
     title: 'Mayor Precisión de Pase y Disparo',
-    desc: 'Entrenar con porterías de tamaño reducido obliga al jugador a afinar la definición y el pase. Cada sesión con ProGoal es un trabajo de precisión que se traduce en mejora real durante el partido.',
+    desc: 'Entrenar con porterías de tamaño reducido obliga al jugador a afinar la definición y el pase. Cada sesión con ProGol es un trabajo de precisión que se traduce en mejora real durante el partido.',
   },
   {
     icon: Activity,
@@ -21,17 +21,17 @@ const benefits = [
   {
     icon: Dumbbell,
     title: 'Mayor Variedad de Ejercicios Tácticos',
-    desc: 'ProGoal permite a los entrenadores diseñar rondos, ejercicios de presión, situaciones de finalización y juegos reducidos con mayor dificultad y complejidad. Más variedad = más motivación.',
+    desc: 'ProGol permite a los entrenadores diseñar rondos, ejercicios de presión, situaciones de finalización y juegos reducidos con mayor dificultad y complejidad. Más variedad = más motivación.',
   },
   {
     icon: Compass,
     title: 'Entrena Donde y Cuando Quieras',
-    desc: 'Ligera, compacta y plegable: ProGoal va a donde vas tú. Campo, patio, playa, parking — no estás limitado a una instalación fija. La portabilidad es una ventaja táctica en sí misma.',
+    desc: 'Ligera, compacta y plegable: ProGol va a donde vas tú. Campo, patio, playa, parking — no estás limitado a una instalación fija. La portabilidad es una ventaja táctica en sí misma.',
   },
   {
     icon: Users,
     title: 'Para Todas las Edades y Niveles',
-    desc: 'Desde categorías prebenjamín hasta entrenamiento de élite profesional. ProGoal es la herramienta de desarrollo que acompaña al jugador durante toda su carrera deportiva.',
+    desc: 'Desde categorías prebenjamín hasta entrenamiento de élite profesional. ProGol es la herramienta de desarrollo que acompaña al jugador durante toda su carrera deportiva.',
   },
 ];
 
@@ -55,7 +55,7 @@ export default function TrainingBenefits() {
           <motion.p initial={{ opacity: 0 }} animate={inView ? { opacity: 1 } : {}} transition={{ delay: 0.22 }}
             style={{ marginTop: 16, color: '#666', fontSize: 15, fontWeight: 500, lineHeight: 1.75, maxWidth: 560 }}>
             Las porterías de entrenamiento de tamaño reducido han demostrado científicamente mejorar las
-            habilidades individuales y colectivas. ProGoal está diseñada para maximizar cada uno de estos beneficios.
+            habilidades individuales y colectivas. ProGol está diseñada para maximizar cada uno de estos beneficios.
           </motion.p>
         </div>
 
@@ -83,7 +83,7 @@ export default function TrainingBenefits() {
             Perfecto para
           </p>
           <p style={{ fontSize: 'clamp(1.2rem, 3vw, 1.8rem)', fontWeight: 800, color: '#fff', lineHeight: 1.4, maxWidth: 640, fontFamily: 'Montserrat, sans-serif' }}>
-            "ProGoal es perfecta para entrenamientos de todas las edades y niveles. Ideal para{' '}
+            "ProGol es perfecta para entrenamientos de todas las edades y niveles. Ideal para{' '}
             <span style={{ color: '#c9a84c' }}>entrenadores, clubes y academias</span> que buscan elevar
             la calidad de sus sesiones con partidos reducidos y ejercicios tácticos de precisión."
           </p>
@@ -97,10 +97,10 @@ export default function TrainingBenefits() {
           viewport={{ once: true }} transition={{ duration: 0.6, delay: 0.1 }}
           style={{ marginTop: 12, display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 10, height: 280 }}>
           <img src="/Imagenes/ProGol Sports porterias (6).jpeg"
-            alt="Sesión de entrenamiento táctico con porterías ProGoal en campo de césped"
+            alt="Sesión de entrenamiento táctico con porterías ProGol en campo de césped"
             style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
           <img src="/Imagenes/ProGol Sports porterias (7).jpeg"
-            alt="Jugadores en ejercicio de precisión con portería ProGoal Sports"
+            alt="Jugadores en ejercicio de precisión con portería ProGol Sports"
             style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
         </motion.div>
       </div>

@@ -21,7 +21,7 @@ export default function Contact() {
             </motion.div>
             <motion.h2 id="contact-heading" className="section-title"
               initial={{ opacity: 0, y: 20 }} animate={inView ? { opacity: 1, y: 0 } : {}} transition={{ delay: 0.1 }}>
-              Lleva ProGoal<br /><span className="gold">a tu club.</span>
+              Lleva ProGol<br /><span className="gold">a tu club.</span>
             </motion.h2>
             <motion.p initial={{ opacity: 0 }} animate={inView ? { opacity: 1 } : {}} transition={{ delay: 0.2 }}
               style={{ marginTop: 16, color: '#666', fontSize: 14, fontWeight: 500, lineHeight: 1.8, marginBottom: 36 }}>
@@ -81,7 +81,7 @@ export default function Contact() {
               </div>
             ) : (
               <form className="contact-form" onSubmit={e => { e.preventDefault(); setSent(true); }}
-                aria-label="Formulario de presupuesto ProGoal Sports">
+                aria-label="Formulario de presupuesto ProGol Sports">
                 <div className="form-row">
                   <div>
                     <label className="form-label" htmlFor="nombre">Nombre *</label>

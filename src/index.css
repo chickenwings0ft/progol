@@ -137,7 +137,9 @@ img { display: block; max-width: 100%; }
   color: #888; text-decoration: none;
   transition: color 0.2s;
 }
-.nav-link:hover { color: #c9a84c; }
+.nav-link:hover, .nav-link.active { color: #c9a84c; }
+.nav-cta { display: none; }
+@media (min-width: 900px) { .nav-cta { display: inline-flex; padding: 10px 20px; font-size: 10px; } }
 .nav-hamburger {
   display: none; background: none; border: none; cursor: pointer; padding: 4px;
 }

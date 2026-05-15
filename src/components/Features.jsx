@@ -64,8 +64,8 @@ export default function Features() {
         <div style={{ marginTop: 80, display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: 12 }}>
           <motion.div initial={{ opacity: 0, x: -20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}
             style={{ position: 'relative', height: 400, overflow: 'hidden' }}>
-            <img src="/Imagenes/PRO GOAL - porterias medidas 2.jpeg" 
-                 alt="Dimensiones técnicas ProGoal" 
+            <img src="/Imagenes/PRO GOL - porterias medidas 2.jpeg" 
+                 alt="Dimensiones técnicas ProGol" 
                  style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
             <div style={{ position: 'absolute', bottom: 20, left: 20, background: '#fff', padding: '12px 20px', borderLeft: '3px solid #c9a84c' }}>
               <p style={{ fontFamily: 'Orbitron', fontSize: 10, fontWeight: 900, color: '#111' }}>PRECISIÓN TÉCNICA</p>
@@ -73,7 +73,7 @@ export default function Features() {
           </motion.div>
           <motion.div initial={{ opacity: 0, x: 20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}
             style={{ position: 'relative', height: 400, overflow: 'hidden' }}>
-            <img src="/Imagenes/PRO GOAL almanenaje 2.jpeg" 
+            <img src="/Imagenes/PRO GOL almanenaje 2.jpeg" 
                  alt="Sistema de plegado compacto" 
                  style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
             <div style={{ position: 'absolute', bottom: 20, left: 20, background: '#fff', padding: '12px 20px', borderLeft: '3px solid #c9a84c' }}>

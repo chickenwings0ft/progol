@@ -4,7 +4,7 @@ import { Quote } from 'lucide-react';
 
 const testimonials = [
   {
-    quote: 'Con ProGoal hemos cambiado por completo cómo diseñamos las sesiones. El hecho de que no necesite anclajes y se monte en segundos nos da libertad para cambiar el ejercicio al momento sin perder el ritmo del entrenamiento.',
+    quote: 'Con ProGol hemos cambiado por completo cómo diseñamos las sesiones. El hecho de que no necesite anclajes y se monte en segundos nos da libertad para cambiar el ejercicio al momento sin perder el ritmo del entrenamiento.',
     author: 'Alejandro Martínez',
     role: 'Director Técnico — Academia CD Villarreal Sub-14',
     initials: 'AM',
@@ -91,8 +91,8 @@ export default function SocialProof() {
         {/* Banner */}
         <motion.div className="banner-wrap"
           initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.7 }}>
-          <img src="/Imagenes/PRO GOAL porterias (5).jpeg"
-            alt="Porterías ProGoal Sports en uso en campo de entrenamiento — vista panorámica" />
+          <img src="/Imagenes/PRO GOL porterias (5).jpeg"
+            alt="Porterías ProGol Sports en uso en campo de entrenamiento — vista panorámica" />
           <div className="banner-overlay">
             <div>
               <p style={{ fontFamily: 'Orbitron, sans-serif', fontSize: 10, fontWeight: 700, letterSpacing: '0.25em', textTransform: 'uppercase', color: '#c9a84c', marginBottom: 12 }}>
