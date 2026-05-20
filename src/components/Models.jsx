@@ -103,7 +103,14 @@ export default function Models() {
                   </li>
                 ))}
               </ul>
-              <a href="#contact" className="model-cta"
+              <a 
+                href="#contact" 
+                className="model-cta"
+                onClick={() => {
+                  if (typeof window.gtag === 'function') {
+                    window.gtag('event', 'click_cta', { boton: 'Solicitar modelo ' + m.name, seccion: 'Modelos' });
+                  }
+                }}
                 style={m.featured
                   ? { background: '#c9a84c', color: '#111' }
                   : { background: '#111', color: '#fff' }}>
@@ -152,7 +159,15 @@ export default function Models() {
           style={{ marginTop: 28, textAlign: 'center', fontSize: 13, color: '#aaa', fontWeight: 500 }}>
           Todos los modelos disponibles en{' '}
           <strong style={{ color: '#111' }}>varios colores</strong> y personalizables con el escudo de tu club.{' '}
-          <a href="#contact" style={{ color: '#c9a84c', fontWeight: 700, textDecoration: 'none' }}>
+          <a 
+            href="#contact" 
+            style={{ color: '#c9a84c', fontWeight: 700, textDecoration: 'none' }}
+            onClick={() => {
+              if (typeof window.gtag === 'function') {
+                window.gtag('event', 'click_cta', { boton: 'Solicita presupuesto pie', seccion: 'Modelos' });
+              }
+            }}
+          >
             Solicita tu presupuesto personalizado →
           </a>
         </motion.p>

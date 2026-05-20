@@ -82,7 +82,13 @@ export default function Contact() {
                 </p>
               </div>
             ) : (
-              <form className="contact-form" onSubmit={e => { e.preventDefault(); setSent(true); }}
+              <form className="contact-form" onSubmit={e => { 
+                e.preventDefault(); 
+                setSent(true); 
+                if (typeof window.gtag === 'function') {
+                  window.gtag('event', 'form_submit', { form_name: 'Contacto' });
+                }
+              }}
                 aria-label="Contact form">
                 <div className="form-row">
                   <div>
