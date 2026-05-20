@@ -78,26 +78,10 @@ export default function Hero() {
         <motion.div className="hero-ctas"
           initial={{ opacity: 0, y: 14 }} animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.85, duration: 0.55 }}>
-          <a 
-            href="#models" 
-            className="btn-dark"
-            onClick={() => {
-              if (typeof window.gtag === 'function') {
-                window.gtag('event', 'click_cta', { boton: 'Ver modelos', seccion: 'Hero' });
-              }
-            }}
-          >
+          <a href="#models" className="btn-dark">
             Ver modelos <ArrowRight size={14} />
           </a>
-          <a 
-            href="#features" 
-            className="hero-ghost-link"
-            onClick={() => {
-              if (typeof window.gtag === 'function') {
-                window.gtag('event', 'click_cta', { boton: 'Cómo funciona', seccion: 'Hero' });
-              }
-            }}
-          >
+          <a href="#features" className="hero-ghost-link">
             Cómo funciona
           </a>
         </motion.div>

@@ -38,6 +38,11 @@ export default function Navbar() {
               <Link
                 to={l.href}
                 className={`nav-link${location.pathname === l.href ? ' active' : ''}`}
+                onClick={() => {
+                  if (l.href === '/contacto' && typeof window.gtag === 'function') {
+                    window.gtag('event', 'click_cta', { boton: 'Contacto Header' });
+                  }
+                }}
               >
                 {l.label}
               </Link>
@@ -99,7 +104,12 @@ export default function Navbar() {
               </button>
             </div>
             {links.map(l => (
-              <Link key={l.href} to={l.href} className="nav-link" onClick={() => setOpen(false)}>
+              <Link key={l.href} to={l.href} className="nav-link" onClick={() => {
+                setOpen(false);
+                if (l.href === '/contacto' && typeof window.gtag === 'function') {
+                  window.gtag('event', 'click_cta', { boton: 'Contacto Header Movil' });
+                }
+              }}>
                 {l.label}
               </Link>
             ))}
