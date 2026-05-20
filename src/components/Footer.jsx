@@ -1,16 +1,19 @@
 import { Link } from 'react-router-dom';
 import { Mail, Share2 } from 'lucide-react';
+import { useLanguage } from '../context/LanguageContext';
 
 export default function Footer() {
+  const { t } = useLanguage();
+
   return (
-    <footer className="site-footer" aria-label="Pie de página ProGol Sports">
+    <footer className="site-footer" aria-label="ProGoal Sports footer">
       <div className="container">
         <div className="footer-grid">
           {/* Brand */}
           <div>
-            <img src="/logo.png" alt="ProGol Sports" style={{ height: 44, width: 'auto', marginBottom: 20 }} />
+            <img src="/logo.png" alt="ProGoal Sports" style={{ height: 44, width: 'auto', marginBottom: 20 }} />
             <p style={{ fontSize: 13, color: '#555', lineHeight: 1.7, fontWeight: 500, maxWidth: 280 }}>
-              Porterías de entrenamiento profesional de aluminio aeroespacial. Para clubes, academias y entrenadores que no se conforman.
+              {t('home.hero_sub')}
             </p>
             <div className="footer-social">
               <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="footer-social-btn" aria-label="Instagram">
@@ -23,26 +26,26 @@ export default function Footer() {
           </div>
 
           {/* Navigation */}
-          <nav aria-label="Navegación ProGol">
-            <p className="footer-col-title">Navegación</p>
-            <Link to="/"                className="footer-link">Inicio</Link>
-            <Link to="/caracteristicas" className="footer-link">Características</Link>
-            <Link to="/modelos"         className="footer-link">Modelos y Precios</Link>
-            <Link to="/galeria"         className="footer-link">Galería</Link>
-            <Link to="/contacto"        className="footer-link">Contacto</Link>
+          <nav aria-label="ProGoal Navigation">
+            <p className="footer-col-title">{t('nav.features')}</p>
+            <Link to="/"                className="footer-link">{t('nav.features')}</Link>
+            <Link to="/caracteristicas" className="footer-link">{t('nav.features')}</Link>
+            <Link to="/modelos"         className="footer-link">{t('nav.models')}</Link>
+            <Link to="/galeria"         className="footer-link">{t('nav.gallery')}</Link>
+            <Link to="/contacto"        className="footer-link">{t('nav.contact')}</Link>
           </nav>
 
           {/* Contact */}
           <div>
-            <p className="footer-col-title">Contacto</p>
+            <p className="footer-col-title">{t('nav.contact')}</p>
             <a href="mailto:progolsports@gmail.com" className="footer-link">progolsports@gmail.com</a>
-            <p className="footer-link" style={{ cursor: 'default' }}>Hecho en España</p>
+            <p className="footer-link" style={{ cursor: 'default' }}>{t('contact.value_fab')}</p>
           </div>
         </div>
 
         <div className="footer-bottom">
-          <p className="footer-copy">© 2025 ProGol Sports. Todos los derechos reservados.</p>
-          <p className="footer-copy" style={{ color: '#333' }}>Aluminio Aeroespacial · Hecho en España</p>
+          <p className="footer-copy">{t('footer.rights')}</p>
+          <p className="footer-copy" style={{ color: '#333' }}>{t('contact.value_fab')}</p>
         </div>
       </div>
     </footer>

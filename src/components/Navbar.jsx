@@ -1,20 +1,22 @@
 import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { AnimatePresence, motion } from 'framer-motion';
-import { Menu, X } from 'lucide-react';
-
-const links = [
-  { label: 'Características', href: '/caracteristicas' },
-  { label: 'Modelos',         href: '/modelos' },
-  { label: 'Personalización', href: '/personalizacion' },
-  { label: 'Galería',         href: '/galeria' },
-  { label: 'Contacto',        href: '/contacto' },
-];
+import { Menu, X, Globe } from 'lucide-react';
+import { useLanguage } from '../context/LanguageContext';
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
   const location = useLocation();
+  const { lang, toggleLanguage, t } = useLanguage();
+
+  const links = [
+    { label: t('nav.features'), href: '/caracteristicas' },
+    { label: t('nav.models'),   href: '/modelos' },
+    { label: t('nav.custom'),   href: '/personalizacion' },
+    { label: t('nav.gallery'),  href: '/galeria' },
+    { label: t('nav.contact'),  href: '/contacto' },
+  ];
 
   useEffect(() => {
     const fn = () => setScrolled(window.scrollY > 40);
@@ -22,14 +24,13 @@ export default function Navbar() {
     return () => window.removeEventListener('scroll', fn);
   }, []);
 
-  // Close menu on route change
   useEffect(() => { setOpen(false); }, [location.pathname]);
 
   return (
     <header className={`navbar${scrolled ? ' scrolled' : ''}`}>
       <div className="navbar-inner">
         <Link to="/">
-          <img src="/logo.png" alt="ProGol Sports porterías de élite" className="nav-logo" />
+          <img src="/logo.png" alt="ProGoal Sports" className="nav-logo" />
         </Link>
         <ul className="nav-links">
           {links.map(l => (
@@ -44,12 +45,28 @@ export default function Navbar() {
           ))}
         </ul>
         <div className="nav-ctas-group" style={{ display: 'flex', gap: 12, alignItems: 'center' }}>
-          <Link to="/personalizacion" className="btn-outline nav-cta-secondary" style={{ padding: '8px 16px', fontSize: 12 }}>
-            Personalizar
-          </Link>
-          <Link to="/contacto" className="btn-dark nav-cta">
-            Presupuesto
-          </Link>
+          <button 
+            onClick={toggleLanguage}
+            className="lang-switcher"
+            style={{
+              background: 'none',
+              border: '1px solid #eee',
+              borderRadius: '4px',
+              padding: '4px 8px',
+              cursor: 'pointer',
+              display: 'flex',
+              alignItems: 'center',
+              gap: 6,
+              fontSize: '11px',
+              fontWeight: '800',
+              color: '#111',
+              textTransform: 'uppercase'
+            }}
+          >
+            <Globe size={14} color="#c9a84c" />
+            {lang === 'es' ? 'EN' : 'ES'}
+          </button>
+          {/* CTA button removed as requested */}
         </div>
         <button className="nav-hamburger" onClick={() => setOpen(!open)} aria-label="Menú">
           {open ? <X size={22} color="#111" /> : <Menu size={22} color="#111" />}
@@ -59,15 +76,34 @@ export default function Navbar() {
         {open && (
           <motion.div className="mobile-menu"
             initial={{ opacity: 0, y: -8 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -8 }}>
+            <div style={{ padding: '16px 0', borderBottom: '1px solid #eee', marginBottom: 16 }}>
+              <button 
+                onClick={toggleLanguage}
+                style={{
+                  width: '100%',
+                  background: '#f8f8f8',
+                  border: 'none',
+                  borderRadius: '4px',
+                  padding: '12px',
+                  cursor: 'pointer',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  gap: 8,
+                  fontSize: '13px',
+                  fontWeight: '800'
+                }}
+              >
+                <Globe size={16} color="#c9a84c" />
+                {lang === 'es' ? 'SWITCH TO ENGLISH' : 'CAMBIAR A ESPAÑOL'}
+              </button>
+            </div>
             {links.map(l => (
               <Link key={l.href} to={l.href} className="nav-link" onClick={() => setOpen(false)}>
                 {l.label}
               </Link>
             ))}
-            <Link to="/contacto" className="btn-dark" onClick={() => setOpen(false)}
-              style={{ alignSelf: 'flex-start' }}>
-              Solicitar Precio
-            </Link>
+            {/* Mobile budget CTA removed as requested */}
           </motion.div>
         )}
       </AnimatePresence>

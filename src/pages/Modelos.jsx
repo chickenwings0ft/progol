@@ -1,42 +1,35 @@
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 import { motion } from 'framer-motion';
+import { useLanguage } from '../context/LanguageContext';
 import Models from '../components/Models';
 import FAQ from '../components/FAQ';
 import Contact from '../components/Contact';
 
-const faqItems = [
-  {
-    q: '¿Cuál es el modelo más vendido de ProGol?',
-    a: 'El modelo Grande (L) de 1.80 × 1.20 m es el más demandado por clubes y academias. Su tamaño equivale aproximadamente al de una portería reglamentaria de fútbol sala, lo que lo hace ideal para entrenamientos específicos de finalización, rondos y ejercicios tácticos en categorías desde infantil hasta amateur adulto. La combinación de tamaño, portabilidad y precio lo convierte en la elección más versátil.',
-  },
-  {
-    q: '¿Qué tamaño de portería necesito para mi academia?',
-    a: 'Depende de la categoría y del tipo de ejercicio. Para categorías prebenjamín y benjamín (6–10 años), recomendamos el modelo Pequeña (S) de 1.20 × 0.75 m. Para alevín e infantil (10–14 años), el modelo Mediana (M) de 1.50 × 0.90 m es ideal. Para cadete, juvenil y adulto, el Grande (L) de 1.80 × 1.20 m cubre todas las necesidades. El Extra (XL) de 2.00 × 1.00 m es específico para entrenamientos de porteros y ejercicios que requieren amplitud horizontal.',
-  },
-  {
-    q: '¿Puedo usar el modelo L para entrenamientos de porteros?',
-    a: 'El modelo Grande (L) es adecuado para entrenamientos generales de porteros en categorías inferiores. Sin embargo, para preparadores de porteros profesionales que buscan trabajar con más amplitud y variedad de ángulos de disparo, recomendamos el modelo Extra (XL) de 2.00 × 1.00 m, que ofrece mayor apertura horizontal, ideal para ejercicios de estirada, salida y saque.',
-  },
-  {
-    q: '¿Cuánto cuesta el envío de las porterías?',
-    a: 'Los gastos de envío dependen del número de unidades, el modelo seleccionado y el destino. Para pedidos dentro de España peninsular, ofrecemos envío rápido a través de agencia de transporte certificada. Para Canarias, Baleares, Ceuta, Melilla y Europa, consulta el presupuesto personalizado. Los pedidos por volumen (a partir de 4 unidades) incluyen condiciones especiales de transporte.',
-  },
-  {
-    q: '¿Los precios incluyen IVA?',
-    a: 'Los precios indicados en la web (325€, 350€, 375€) son precios sin IVA para facilitar la comparación entre particulares y empresas. Para pedidos de clubes, academias y asociaciones deportivas con número de IVA, podemos emitir factura con el tipo de IVA correspondiente. Consulta las condiciones fiscales en tu solicitud de presupuesto.',
-  },
-  {
-    q: '¿Ofrecéis garantía en las porterías?',
-    a: 'Sí. Todas las porterías ProGol incluyen garantía de fabricación de 2 años contra defectos de material y fabricación, de acuerdo con la normativa europea de garantía de productos. La garantía cubre deformaciones estructurales, fallos en las uniones y defectos en la red. No cubre daños por uso incorrecto o accidentes.',
-  },
-  {
-    q: '¿Puedo comprar porterías de diferentes tamaños en el mismo pedido?',
-    a: 'Por supuesto. Muchos clubes y academias realizan pedidos mixtos que combinan, por ejemplo, 4 unidades Grandes (L) para entrenamientos de finalización y 2 unidades Extra (XL) para preparación de porteros. Podemos preparar un presupuesto personalizado para cualquier combinación de modelos y cantidades.',
-  },
-];
-
 export default function Modelos() {
+  const { t, lang } = useLanguage();
+
+  const faqItems = [
+    {
+      q: lang === 'es' ? '¿Cuál es el modelo más vendido de ProGoal?' : 'What is the best-selling ProGoal model?',
+      a: lang === 'es' 
+        ? 'El modelo Grande (L) de 1.80 × 1.20 m es el más demandado por clubes y academias. Es ideal para entrenamientos específicos de finalización.' 
+        : 'The Large (L) 1.80 × 1.20 m model is the most requested by clubs and academies. It is ideal for specific finishing drills.',
+    },
+    {
+      q: lang === 'es' ? '¿Qué tamaño de portería necesito para mi academia?' : 'What goal size do I need for my academy?',
+      a: lang === 'es' 
+        ? 'Depende de la categoría. Recomendamos S para 6-10 años, M para 10-14 años y L para cadetes y adultos.' 
+        : 'It depends on the category. We recommend S for 6-10 years, M for 10-14 years, and L for U16 and adults.',
+    },
+    {
+        q: lang === 'es' ? '¿Ofrecéis garantía en las porterías?' : 'Do you offer a warranty on the goals?',
+        a: lang === 'es'
+            ? 'Sí, todas las porterías ProGoal incluyen garantía de fabricación de 2 años.'
+            : 'Yes, all ProGoal goals include a 2-year manufacturing warranty.',
+    }
+  ];
+
   return (
     <>
       {/* Page header */}
@@ -44,15 +37,13 @@ export default function Modelos() {
         <div className="container">
           <div className="eyebrow">
             <span className="eyebrow-line" style={{ background: '#c9a84c' }} />
-            <span className="eyebrow-text">Modelos y Precios</span>
+            <span className="eyebrow-text">{t('models_page.eyebrow')}</span>
           </div>
           <h1 className="section-title" style={{ color: '#111', fontSize: 'clamp(2.2rem, 5vw, 3.8rem)', marginBottom: 20 }}>
-            Encuentra tu modelo<br /><span className="gold">ProGol.</span>
+            {t('models_page.title')}<br /><span className="gold">{t('models_page.title_accent')}</span>
           </h1>
           <p style={{ color: '#666', fontSize: 16, fontWeight: 500, maxWidth: 560, lineHeight: 1.8 }}>
-            Cuatro tamaños diseñados para cada etapa del desarrollo deportivo, tipo de ejercicio y nivel de
-            competición. Todos comparten el mismo marco de aluminio aeroespacial 50mm, la misma red de malla
-            reforzada y el mismo sistema de montaje instantáneo sin herramientas.
+            {t('models_page.desc')}
           </p>
         </div>
       </div>
@@ -62,25 +53,20 @@ export default function Modelos() {
         <div className="container">
           <motion.div style={{ maxWidth: 780, margin: '0 auto' }}
             initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
-            <div className="eyebrow"><span className="eyebrow-line" /><span className="eyebrow-text">Guía de elección</span></div>
-            <h2 className="section-title" style={{ marginBottom: 28 }}>¿Qué modelo es<br /><span className="gold">el más adecuado?</span></h2>
+            <div className="eyebrow"><span className="eyebrow-line" /><span className="eyebrow-text">{t('models_page.guide_eyebrow')}</span></div>
+            <h2 className="section-title" style={{ marginBottom: 28 }}>{t('models_page.guide_title')}<br /><span className="gold">{t('models_page.guide_title_accent')}</span></h2>
             <p style={{ fontSize: 15, color: '#555', lineHeight: 1.9, fontWeight: 500, marginBottom: 20 }}>
-              La elección del tamaño correcto de portería es una decisión táctica que afecta directamente
-              a la calidad del entrenamiento. Una portería demasiado grande para una categoría infantil
-              reduce la dificultad del disparo y limita los beneficios de precisión. Una portería demasiado
-              pequeña para ejercicios adultos puede frustrar el desarrollo técnico.
+              {t('models_page.guide_desc_1')}
             </p>
             <p style={{ fontSize: 15, color: '#555', lineHeight: 1.9, fontWeight: 500, marginBottom: 20 }}>
-              ProGol ofrece <strong>cuatro tamaños</strong> pensados específicamente para cubrir todo el espectro
-              del fútbol formativo y de competición. La siguiente guía te ayudará a encontrar el modelo ideal
-              según la edad, el nivel y el tipo de ejercicio que practiques habitualmente.
+              {t('models_page.guide_desc_2')}
             </p>
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: 16, marginTop: 40 }}>
               {[
-                { model: 'Pequeña (S)', dims: '1.20 × 0.75 m', price: '325€', best: 'Prebenjamín y Benjamín (6–10 años). Fútbol sala y fútbol 5. Entrenamiento de pase y precisión en espacios reducidos.', color: '#f8f8f8' },
-                { model: 'Mediana (M)', dims: '1.50 × 0.90 m', price: '350€', best: 'Alevín e Infantil (10–14 años). Ejercicios de finalización y tiro. Rondos de presión y transición.', color: '#f8f8f8' },
-                { model: 'Grande (L)',  dims: '1.80 × 1.20 m', price: '375€', best: 'Cadete, Juvenil y Amateur adulto. Tamaño recomendado para la mayoría de academias y clubes de competición.', color: '#111' },
-                { model: 'Extra (XL)', dims: '2.00 × 1.00 m', price: '375€', best: 'Preparadores de porteros y ejercicios de amplitud. Estiradas, salidas y saques de portero.', color: '#f8f8f8' },
+                { model: t('models.size_s'), dims: '1.20 × 0.75 m', price: '325€', best: t('models_page.size_s_desc'), color: '#f8f8f8' },
+                { model: t('models.size_m'), dims: '1.50 × 0.90 m', price: '350€', best: t('models_page.size_m_desc'), color: '#f8f8f8' },
+                { model: t('models.size_l'),  dims: '1.80 × 1.20 m', price: '375€', best: t('models_page.size_l_desc'), color: '#111' },
+                { model: t('models.size_xl'), dims: '2.00 × 1.00 m', price: '375€', best: t('models_page.size_xl_desc'), color: '#f8f8f8' },
               ].map((m, i) => (
                 <motion.div key={i} style={{ padding: '28px', background: m.color, border: m.color === '#111' ? '2px solid #c9a84c' : '1px solid #eee' }}
                   initial={{ opacity: 0, y: 16 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.08 }}>
@@ -101,22 +87,18 @@ export default function Modelos() {
         <div className="container">
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: 64, alignItems: 'center' }}>
             <motion.div initial={{ opacity: 0, x: -20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}>
-              <div className="eyebrow"><span className="eyebrow-line" /><span className="eyebrow-text">Personalización</span></div>
-              <h2 className="section-title" style={{ marginBottom: 20 }}>Tu logo,<br /><span className="gold">tu portería.</span></h2>
+              <div className="eyebrow"><span className="eyebrow-line" /><span className="eyebrow-text">{t('nav.custom')}</span></div>
+              <h2 className="section-title" style={{ marginBottom: 20 }}>{t('models_page.custom_title')}<br /><span className="gold">{t('models_page.custom_title_accent')}</span></h2>
               <p style={{ fontSize: 15, color: '#555', lineHeight: 1.9, fontWeight: 500, marginBottom: 20 }}>
-                ProGol ofrece la posibilidad de personalizar la red con el <strong>escudo o logo de tu club</strong>.
-                Esta opción es especialmente valorada por academias y clubes que quieren reforzar la identidad
-                de marca durante los entrenamientos y en fotos y vídeos para redes sociales.
+                {t('models_page.custom_desc_1')}
               </p>
               <p style={{ fontSize: 15, color: '#555', lineHeight: 1.9, fontWeight: 500, marginBottom: 28 }}>
-                Además del logo en la red, las porterías ProGol están disponibles en <strong>varios colores de marco</strong>,
-                lo que permite coordinar con los colores corporativos del club. Consulta con nuestro equipo
-                las opciones de personalización disponibles para tu pedido.
+                {t('models_page.custom_desc_2')}
               </p>
-              <Link to="/contacto" className="btn-dark">Solicitar personalización <ArrowRight size={13} /></Link>
+              <Link to="/contacto" className="btn-dark">{t('models_page.custom_cta')} <ArrowRight size={13} /></Link>
             </motion.div>
             <motion.div initial={{ opacity: 0, x: 20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}>
-              <img src="/Imagenes/ProGol Sports Roja perfil.png" alt="Portería ProGol personalizada en color rojo — vista de perfil"
+              <img src="/Imagenes/ProGol Sports Roja perfil.png" alt="Custom ProGoal"
                 style={{ width: '100%', height: 380, objectFit: 'cover', objectPosition: 'center' }} />
             </motion.div>
           </div>
@@ -128,8 +110,8 @@ export default function Modelos() {
 
       <div style={{ background: '#fff', padding: '64px 0', textAlign: 'center', borderTop: '1px solid #f0f0f0' }}>
         <div className="container">
-          <p style={{ color: '#aaa', fontFamily: 'Orbitron, sans-serif', fontSize: 10, letterSpacing: '0.2em', textTransform: 'uppercase', marginBottom: 20 }}>¿Tienes dudas sobre el tamaño?</p>
-          <Link to="/contacto" className="btn-dark">Solicitar asesoramiento gratuito <ArrowRight size={13} /></Link>
+          <p style={{ color: '#aaa', fontFamily: 'Orbitron, sans-serif', fontSize: 10, letterSpacing: '0.2em', textTransform: 'uppercase', marginBottom: 20 }}>{t('models_page.advice_text')}</p>
+          <Link to="/contacto" className="btn-dark">{t('models_page.advice_cta')} <ArrowRight size={13} /></Link>
         </div>
       </div>
     </>

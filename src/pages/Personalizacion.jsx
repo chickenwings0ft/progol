@@ -1,6 +1,7 @@
 import { useState, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Check, ArrowRight, Palette, Info, Upload, X, Camera, Wand2, Plus } from 'lucide-react';
+import { useLanguage } from '../context/LanguageContext';
 import Contact from '../components/Contact';
 
 const defaultColors = [
@@ -10,6 +11,20 @@ const defaultColors = [
   { name: 'Negro Mate', hex: '#111827' },
   { name: 'Blanco Pro', hex: '#F9FAFB' },
   { name: 'Amarillo Neón', hex: '#EAB308' },
+  { name: 'Naranja Valencia', hex: '#F97316' },
+  { name: 'Violeta Madrid', hex: '#7C3AED' },
+  { name: 'Rosa Inter', hex: '#EC4899' },
+  { name: 'Cian City', hex: '#06B6D4' },
+  { name: 'Burdeos Barca', hex: '#7F1D1D' },
+  { name: 'Verde Betis', hex: '#14532D' },
+  { name: 'Azul Marino', hex: '#1E3A8A' },
+  { name: 'Gris Tech', hex: '#64748B' },
+  { name: 'Oro Champions', hex: '#D4AF37' },
+  { name: 'Plata Cup', hex: '#C0C0C0' },
+  { name: 'Menta Fresca', hex: '#2DD4BF' },
+  { name: 'Lima Active', hex: '#84CC16' },
+  { name: 'Coral Play', hex: '#FB7185' },
+  { name: 'Añil Deep', hex: '#4338CA' },
 ];
 
 const DEFAULT_LOGO = '/Transparent Logo.svg';
@@ -45,6 +60,7 @@ export default function Personalizacion() {
   const [selectedColor, setSelectedColor] = useState(defaultColors[0].hex);
   const [customLogo, setCustomLogo] = useState(DEFAULT_LOGO);
   const [detectedColor, setDetectedColor] = useState(null);
+  const { t } = useLanguage();
   const fileInputRef = useRef(null);
   const colorPickerRef = useRef(null);
 
@@ -100,10 +116,10 @@ export default function Personalizacion() {
           <div style={{ textAlign: 'center' }}>
             <div className="eyebrow" style={{ justifyContent: 'center', marginBottom: 8 }}>
               <Palette size={12} color="#c9a84c" />
-              <span className="eyebrow-text" style={{ fontSize: 10 }}>Personalizador Inteligente</span>
+              <span className="eyebrow-text" style={{ fontSize: 10 }}>{t('customizer.eyebrow')}</span>
             </div>
             <h1 style={{ fontSize: 'clamp(1.5rem, 4vw, 2.2rem)', fontWeight: 900, color: '#111', lineHeight: 1.1, marginBottom: 24, textTransform: 'uppercase' }}>
-              TU <span className="gold">PROGOL.</span>
+              {t('customizer.title_part1')} <span className="gold">{t('customizer.title_part2')}</span>
             </h1>
 
             <div style={{ 
@@ -112,47 +128,47 @@ export default function Personalizacion() {
             }}>
               <GoalSVG color={selectedColor} customLogo={customLogo} />
               
-              <div style={{ marginTop: 20, display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: 12, alignItems: 'center' }}>
+              <div style={{ marginTop: 24, display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(40px, 1fr))', gap: 12, maxWidth: 600, margin: '24px auto 0' }}>
                 {defaultColors.map((c) => (
                   <button key={c.name} onClick={() => { setSelectedColor(c.hex); setDetectedColor(null); }}
                     style={{
-                      width: 44, height: 44, borderRadius: '50%', background: c.hex,
-                      border: selectedColor === c.hex && !detectedColor ? '3px solid #c9a84c' : '2px solid #fff',
-                      boxShadow: '0 4px 12px rgba(0,0,0,0.1)', cursor: 'pointer',
-                      transition: 'all 0.2s', transform: selectedColor === c.hex && !detectedColor ? 'scale(1.1)' : 'scale(1)'
+                      width: 40, height: 40, borderRadius: '50%', background: c.hex,
+                      border: selectedColor === c.hex && !detectedColor ? '3px solid #c9a84c' : '2px solid #eee',
+                      boxShadow: '0 2px 8px rgba(0,0,0,0.05)', cursor: 'pointer',
+                      transition: 'all 0.2s', transform: selectedColor === c.hex && !detectedColor ? 'scale(1.15)' : 'scale(1)'
                     }}
+                    title={c.name}
                   />
                 ))}
 
                 {detectedColor && (
                   <button onClick={() => setSelectedColor(detectedColor)}
                     style={{
-                      width: 44, height: 44, borderRadius: '50%', background: detectedColor,
+                      width: 40, height: 40, borderRadius: '50%', background: detectedColor,
                       border: selectedColor === detectedColor ? '3px solid #c9a84c' : '2px solid #fff',
                       boxShadow: '0 4px 12px rgba(0,0,0,0.1)', cursor: 'pointer', position: 'relative',
-                      transition: 'all 0.2s', transform: 'scale(1.1)'
+                      transition: 'all 0.2s', transform: 'scale(1.15)'
                     }}
                   >
-                    <div style={{ position: 'absolute', top: -14, left: '50%', transform: 'translateX(-50%)', background: '#c9a84c', color: '#fff', padding: '2px 8px', borderRadius: 10, fontSize: 8, fontWeight: 900, whiteSpace: 'nowrap' }}>
-                      LOGO
+                    <div style={{ position: 'absolute', top: -18, left: '50%', transform: 'translateX(-50%)', background: '#c9a84c', color: '#fff', padding: '2px 6px', borderRadius: 10, fontSize: 7, fontWeight: 900, whiteSpace: 'nowrap' }}>
+                      {t('customizer.logo_label')}
                     </div>
                   </button>
                 )}
 
-                {/* Minimalist Plus Button for Custom Color */}
                 <div style={{ position: 'relative' }}>
                   <button 
                     onClick={() => colorPickerRef.current.click()}
                     style={{
-                      width: 44, height: 44, borderRadius: '50%', 
-                      background: isCustomColor ? selectedColor : '#f0f0f0',
-                      border: isCustomColor ? '3px solid #c9a84c' : '2px solid #fff',
-                      boxShadow: '0 4px 12px rgba(0,0,0,0.1)', cursor: 'pointer',
+                      width: 40, height: 40, borderRadius: '50%', 
+                      background: isCustomColor ? selectedColor : '#f8f8f8',
+                      border: isCustomColor ? '3px solid #c9a84c' : '2px dashed #ccc',
+                      boxShadow: '0 2px 8px rgba(0,0,0,0.05)', cursor: 'pointer',
                       display: 'flex', alignItems: 'center', justifyContent: 'center',
                       transition: 'all 0.2s'
                     }}
                   >
-                    <Plus size={20} color={isCustomColor ? '#fff' : '#aaa'} />
+                    <Plus size={18} color={isCustomColor ? '#fff' : '#999'} />
                   </button>
                   <input 
                     type="color" ref={colorPickerRef} value={selectedColor} 
@@ -162,8 +178,8 @@ export default function Personalizacion() {
                 </div>
               </div>
               
-              <p style={{ marginTop: 24, fontSize: 11, fontWeight: 900, color: '#aaa', textTransform: 'uppercase', letterSpacing: '0.2em' }}>
-                {isCustomColor ? `COLOR PERSONALIZADO: ${selectedColor}` : 'ELIGE UN COLOR O SUBE TU LOGO'}
+              <p style={{ marginTop: 32, fontSize: 10, fontWeight: 900, color: '#aaa', textTransform: 'uppercase', letterSpacing: '0.25em' }}>
+                {isCustomColor ? `${t('customizer.custom_color_text')}: ${selectedColor}` : t('customizer.pallete_text')}
               </p>
             </div>
 
@@ -172,8 +188,8 @@ export default function Personalizacion() {
                 {customLogo === DEFAULT_LOGO ? (
                   <div onClick={() => fileInputRef.current.click()} style={{ cursor: 'pointer' }}>
                     <Upload size={32} color="#aaa" style={{ marginBottom: 12 }} />
-                    <p style={{ fontSize: 14, fontWeight: 700, color: '#111', marginBottom: 4 }}>Sube tu escudo y detectaremos el color</p>
-                    <p style={{ fontSize: 12, color: '#aaa' }}>La portería se pintará automáticamente</p>
+                    <p style={{ fontSize: 14, fontWeight: 700, color: '#111', marginBottom: 4 }}>{t('customizer.upload_text')}</p>
+                    <p style={{ fontSize: 12, color: '#aaa' }}>{t('customizer.upload_subtext')}</p>
                   </div>
                 ) : (
                   <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 24 }}>
@@ -184,9 +200,9 @@ export default function Personalizacion() {
                     <div style={{ textAlign: 'left' }}>
                       <div style={{ display: 'flex', alignItems: 'center', gap: 8, marginBottom: 4 }}>
                         <Wand2 size={16} color="#c9a84c" />
-                        <p style={{ fontSize: 14, fontWeight: 800, color: '#111' }}>Color principal detectado</p>
+                        <p style={{ fontSize: 14, fontWeight: 800, color: '#111' }}>{t('customizer.detected_color')}</p>
                       </div>
-                      <p style={{ fontSize: 12, color: '#666', lineHeight: 1.5 }}>Hemos identificado el color más puro de tu logo para aplicarlo a la portería.</p>
+                      <p style={{ fontSize: 12, color: '#666', lineHeight: 1.5 }}>{t('customizer.detected_desc')}</p>
                     </div>
                   </div>
                 )}
@@ -197,7 +213,7 @@ export default function Personalizacion() {
             <div style={{ background: '#fdf8ea', padding: '24px', borderLeft: '4px solid #c9a84c', display: 'flex', gap: 16, textAlign: 'left', maxWidth: 600, margin: '0 auto' }}>
               <Info size={24} color="#c9a84c" style={{ flexShrink: 0 }} />
               <p style={{ fontSize: 14, color: '#8b7027', fontWeight: 500, lineHeight: 1.6 }}>
-                ¿Buscas un acabado corporativo específico? Usa el botón "+" para elegir cualquier color o sube tu logo para una detección inteligente.
+                {t('customizer.info_box')}
               </p>
             </div>
           </div>
