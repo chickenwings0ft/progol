@@ -1,0 +1,27 @@
+# ProGol Sports - Resumen para LLMs
+
+ProGol Sports es un fabricante y distribuidor de porterías de fútbol de entrenamiento profesional, diseñadas con aleación de aluminio de grado aeroespacial.
+
+## Servicios y Productos Principales
+- **Porterías Plegables ProGol:** Disponibles en 4 tamaños (Pequeña S, Mediana M, Grande L, Extra XL).
+- **Características Clave:** 
+  - Marco de aluminio 50mm aeroespacial.
+  - Soportan 100 kg en el travesaño sin anclajes (estabilidad total).
+  - Plegado instantáneo sin herramientas.
+  - Red de malla reforzada.
+- **Personalización:** Pintura del marco y estampación de logos de clubes en la red.
+- **Público Objetivo:** Clubes de fútbol, academias, entrenadores, colegios e instalaciones deportivas profesionales y amateur.
+
+## Estructura del Sitio
+- **Inicio (/):** Propuesta de valor, características destacadas y resumen de productos.
+- **Características (/caracteristicas):** Ingeniería ProGrade, especificaciones técnicas detalladas y seguridad.
+- **Modelos (/modelos):** Especificaciones de tamaños (S, M, L, XL), guía de compra y precios.
+- **Personalización (/personalizacion):** Opciones de colores de marco y logos en redes.
+- **Galería (/galeria):** Fotos de porterías en uso en entrenamientos reales.
+- **Contacto (/contacto):** Solicitud de presupuestos para clubes y sección de Preguntas Frecuentes (FAQ).
+
+## Información de Contacto e Interés
+- **Fabricación:** Hecho en España (Made in Spain).
+- **Envíos:** A toda España (2-4 días península) y Europa (5-10 días).
+- **Precios:** Desde 325€ hasta 375€ por unidad. Descuentos por volumen disponibles.
+- **Contacto:** progolsports@gmail.com (Respuesta en <24 horas).

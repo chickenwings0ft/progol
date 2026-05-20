@@ -11,22 +11,28 @@ export default function Modelos() {
 
   const faqItems = [
     {
-      q: lang === 'es' ? '¿Cuál es el modelo más vendido de ProGoal?' : 'What is the best-selling ProGoal model?',
+      q: lang === 'es' ? '¿Cuál es el modelo más vendido de portería ProGol?' : 'What is the best-selling ProGoal model?',
       a: lang === 'es' 
-        ? 'El modelo Grande (L) de 1.80 × 1.20 m es el más demandado por clubes y academias. Es ideal para entrenamientos específicos de finalización.' 
-        : 'The Large (L) 1.80 × 1.20 m model is the most requested by clubs and academies. It is ideal for specific finishing drills.',
+        ? 'El modelo Grande (L) de 1.80 × 1.20 m es nuestro top ventas mundial. Es la medida estándar preferida por clubes y academias profesionales para ejercicios de finalización y partidos en espacios reducidos (Small-Sided Games).' 
+        : 'The Large (L) 1.80 × 1.20 m model is our global best-seller. It is the standard size preferred by professional clubs and academies for finishing drills and Small-Sided Games.',
     },
     {
-      q: lang === 'es' ? '¿Qué tamaño de portería necesito para mi academia?' : 'What goal size do I need for my academy?',
+      q: lang === 'es' ? '¿Qué tamaño de portería de entrenamiento necesito para mi academia?' : 'What goal size do I need for my academy?',
       a: lang === 'es' 
-        ? 'Depende de la categoría. Recomendamos S para 6-10 años, M para 10-14 años y L para cadetes y adultos.' 
-        : 'It depends on the category. We recommend S for 6-10 years, M for 10-14 years, and L for U16 and adults.',
+        ? 'La elección depende de la categoría de edad. Recomendamos la talla S (1.20m) para fútbol base (6-10 años), talla M (1.50m) para infantiles (10-14 años) y la talla L (1.80m) para cadetes, juveniles y competición amateur o adulta.' 
+        : 'The choice depends on the age category. We recommend size S (1.20m) for youth football (6-10 years), size M (1.50m) for juniors (10-14 years), and size L (1.80m) for adults and U16+.',
     },
     {
-        q: lang === 'es' ? '¿Ofrecéis garantía en las porterías?' : 'Do you offer a warranty on the goals?',
-        a: lang === 'es'
-            ? 'Sí, todas las porterías ProGoal incluyen garantía de fabricación de 2 años.'
-            : 'Yes, all ProGoal goals include a 2-year manufacturing warranty.',
+      q: lang === 'es' ? '¿Ofrecéis garantía en las porterías de aluminio?' : 'Do you offer a warranty on the aluminum goals?',
+      a: lang === 'es'
+        ? 'Sí, absolutamente. Todas nuestras porterías ProGoal incluyen una garantía directa de fabricación de 2 años contra defectos del marco de aluminio aeroespacial o las bisagras de plegado.'
+        : 'Yes, absolutely. All our ProGoal goals include a direct 2-year manufacturing warranty against defects in the aerospace aluminum frame or folding hinges.',
+    },
+    {
+      q: lang === 'es' ? '¿Están incluidas las redes reforzadas en el precio?' : 'Are the reinforced nets included in the price?',
+      a: lang === 'es'
+        ? 'Sí, cada portería se entrega lista para usar e incluye nuestra red de malla reforzada premium anti-impactos. Además, si solicitas presupuesto para tu club, puedes personalizar el color de la estructura y el logo impreso en la red.'
+        : 'Yes, every goal comes ready to use and includes our premium impact-resistant reinforced mesh net. Additionally, if you request a quote for your club, you can customize the frame color and logo printed on the net.',
     }
   ];
 

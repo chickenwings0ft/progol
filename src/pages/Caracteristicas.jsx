@@ -12,16 +12,28 @@ export default function Caracteristicas() {
 
   const faqItems = [
     {
-      q: lang === 'es' ? '¿De qué material está hecha la portería ProGol?' : 'What material is the ProGoal goal made of?',
+      q: lang === 'es' ? '¿De qué material está hecha la portería de entrenamiento ProGol?' : 'What material is the ProGoal training goal made of?',
       a: lang === 'es' 
-        ? 'El marco de ProGol es una aleación de aluminio de grado aeroespacial de 50mm de diámetro.' 
-        : 'The ProGoal frame is made of a 50mm diameter aerospace-grade aluminum alloy.',
+        ? 'El marco de ProGol está fabricado con una aleación de aluminio de grado aeroespacial de 50mm de diámetro. Este material garantiza máxima resistencia a impactos y condiciones climáticas adversas sin comprometer su peso ligero.' 
+        : 'The ProGoal frame is made of a 50mm diameter aerospace-grade aluminum alloy, ensuring maximum impact resistance and durability in all weather conditions.',
     },
     {
-      q: lang === 'es' ? '¿Cuánto peso puede soportar el travesaño?' : 'How much weight can the crossbar support?',
+      q: lang === 'es' ? '¿Necesita la portería anclajes o sacos de arena para ser estable?' : 'Does the goal need anchors or sandbags for stability?',
       a: lang === 'es' 
-        ? 'El travesaño de ProGol ha sido testado para soportar hasta 100 kg de carga estática.' 
-        : 'The ProGoal crossbar has been tested to support up to 100 kg of static load.',
+        ? 'No. Gracias a su diseño de base equilibrada y la distribución de su peso, la portería ProGol es 100% estable por sí misma. No requiere picas, anclajes ni sacos de arena, incluso frente a disparos muy fuertes.' 
+        : 'No. Thanks to its balanced base design and weight distribution, the ProGoal is 100% stable on its own without needing spikes, anchors, or sandbags.',
+    },
+    {
+      q: lang === 'es' ? '¿Cuánto peso puede soportar el travesaño superior?' : 'How much weight can the crossbar support?',
+      a: lang === 'es' 
+        ? 'El travesaño superior de ProGol ha sido testado rigurosamente para soportar hasta 100 kg de carga estática sin sufrir deformaciones.' 
+        : 'The ProGoal upper crossbar has been rigorously tested to support up to 100 kg of static load without deformation.',
+    },
+    {
+      q: lang === 'es' ? '¿Es fácil de plegar y transportar para un solo entrenador?' : 'Is it easy for a single coach to fold and transport?',
+      a: lang === 'es' 
+        ? 'Sí, el sistema de bisagras inteligentes permite que una sola persona pueda plegar la portería completamente plana en menos de 10 segundos, facilitando su transporte en coche y almacenaje en cuartos de material pequeños.' 
+        : 'Yes, the smart hinge system allows a single person to fold the goal completely flat in less than 10 seconds, making it easy to transport and store in small equipment rooms.',
     }
   ];
 

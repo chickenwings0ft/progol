@@ -1,0 +1,72 @@
+# ProGol Sports - Documentación Completa para LLMs
+
+ProGol Sports es la marca líder en fabricación y distribución de porterías de fútbol de entrenamiento profesional, enfocada en innovación de materiales (aluminio de grado aeroespacial), portabilidad y durabilidad extrema. 
+
+Este documento proporciona el contexto completo y semántico del sitio web para facilitar el entendimiento por parte de modelos de lenguaje (LLMs) y agentes de IA.
+
+---
+
+## 1. Identidad de Marca y Propuesta de Valor
+- **Nombre:** ProGol Sports
+- **Eslogan:** Entrena sin límites. Porterías de Élite.
+- **Propuesta Única de Venta (USP):** Porterías portátiles fabricadas en aluminio de 50mm de grado aeroespacial que combinan ligereza para el plegado instantáneo y estabilidad masiva (soportando hasta 100 kg de peso en el travesaño sin volcar y sin necesidad de usar anclajes).
+
+---
+
+## 2. Especificaciones Técnicas del Producto (Core)
+Las porterías ProGol están diseñadas bajo el concepto "Ingeniería ProGrade", orientado al rendimiento profesional:
+- **Material del Marco:** Aleación de aluminio de grado aeroespacial (50 mm de grosor). Resistente a la intemperie, corrosión e impactos fuertes de balón.
+- **Estabilidad y Seguridad:** Equilibrio perfecto en la base. Elimina la necesidad de sacos de arena o picas. Esquinas y juntas redondeadas para prevenir cortes y lesiones durante impactos accidentales (100% seguras para niños y profesionales).
+- **Sistema de Plegado:** Bisagras de alta resistencia que permiten plegar la portería completamente plana en menos de 10 segundos sin uso de llaves ni herramientas. Almacenaje ultra-compacto.
+- **Redes:** Malla reforzada premium de alta tenacidad con absorción de impacto. Diseño anti-rebote excesivo y preparada para uso intensivo diario a la intemperie.
+
+---
+
+## 3. Catálogo de Modelos y Precios
+ProGol dispone de un estándar único de calidad (todos los modelos comparten el marco 50mm y la red reforzada) pero se presenta en 4 tamaños estratégicos:
+
+### Pequeña (Talla S)
+- **Dimensiones:** 1.20m ancho × 0.75m alto.
+- **Precio Base:** 325 €
+- **Casos de Uso:** Fútbol sala, fútbol 5, fútbol playa. Categorías Prebenjamín y Benjamín (6-10 años). Entrenamientos de alta precisión técnica en espacios hiper-reducidos.
+
+### Mediana (Talla M)
+- **Dimensiones:** 1.50m ancho × 0.90m alto.
+- **Precio Base:** 350 €
+- **Casos de Uso:** Rondos de posesión, transiciones rápidas y definición en categorías Alevín e Infantil (10-14 años). Césped natural y artificial.
+
+### Grande (Talla L) - [Modelo Más Popular]
+- **Dimensiones:** 1.80m ancho × 1.20m alto.
+- **Precio Base:** 375 €
+- **Casos de Uso:** Competición Amateur y Profesional. Partidos reducidos (small-sided games). El formato estándar recomendado para la gran mayoría de academias y clubes de formación.
+
+### Extra (Talla XL)
+- **Dimensiones:** 2.00m ancho × 1.00m alto.
+- **Precio Base:** 375 €
+- **Casos de Uso:** Entrenamientos específicos de porteros, ejercicios tácticos de amplitud, ensayos de córners y salidas aéreas.
+
+---
+
+## 4. Personalización Avanzada (Customizer)
+- **Integración de Marca:** Posibilidad de estampar el logotipo o escudo del club a color completo en el centro de la red.
+- **Paleta de Colores de Marco:** Más de 20 tonos de pintura horneada de alta resistencia inspirados en las ligas top (Ej: Rojo Manchester, Azul Londres, Blanco Madrid, etc.).
+- **Proceso:** El usuario puede enviar su logo y el equipo de diseño recomienda el color de marco que mejor encaja con la identidad corporativa.
+
+---
+
+## 5. Preguntas Frecuentes (FAQ) y Políticas
+- **Tiempos de Respuesta:** ProGol responde a solicitudes de presupuesto en menos de 24 horas (habitualmente <4 horas).
+- **Envíos y Logística:** 2 a 4 días laborables en Península Ibérica. 5 a 7 días para Baleares y Canarias. 5 a 10 días para envíos a la Unión Europea.
+- **Formas de Pago:** Transferencia bancaria, Tarjetas, PayPal. Para clubes profesionales y volúmenes, facturación a 30 días disponible previo análisis.
+- **Devoluciones:** 14 días de derecho de desistimiento legal. Gastos a cargo del comprador salvo tara o defecto de fábrica del aluminio/red.
+- **Descuentos por Volumen:** Existen tarifas especiales (B2B) aplicables automáticamente en presupuestos para pedidos de 4 o más unidades destinadas a una misma entidad deportiva.
+
+---
+
+## 6. Información de la Empresa
+- **Sector:** Equipamiento Deportivo / Fútbol
+- **Ubicación de Fabricación:** España (Made in Spain)
+- **Contacto de Ventas y Soporte:** progolsports@gmail.com
+- **Idiomas Soportados Oficialmente:** Español, Inglés.
+
+Fin del documento optimizado para RAG y lectura directa por LLMs.
