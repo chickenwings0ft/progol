@@ -125,7 +125,7 @@ img { display: block; max-width: 100%; }
   width: 100%; max-width: 1280px; margin: 0 auto; padding: 0 32px;
 }
 @media (max-width: 640px) { .navbar-inner { padding: 0 16px; } }
-.nav-logo { height: 54px; width: auto; }
+.nav-logo { height: 74px; width: auto; }
 .nav-links {
   display: flex; align-items: center; gap: 32px; list-style: none;
 }
