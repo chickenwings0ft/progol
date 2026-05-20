@@ -33,6 +33,7 @@ export default function Footer() {
             <Link to="/modelos"         className="footer-link">{t('nav.models')}</Link>
             <Link to="/galeria"         className="footer-link">{t('nav.gallery')}</Link>
             <Link to="/contacto"        className="footer-link">{t('nav.contact')}</Link>
+            <Link to="/blog"            className="footer-link">Blog & Artículos</Link>
           </nav>
 
           {/* Contact */}

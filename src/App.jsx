@@ -8,6 +8,10 @@ import Modelos from './pages/Modelos';
 import Galeria from './pages/Galeria';
 import Contacto from './pages/Contacto';
 import Personalizacion from './pages/Personalizacion';
+import Blog from './pages/Blog';
+import ComoElegirPorteria from './pages/blog/ComoElegirPorteria';
+import AluminioAeroespacial from './pages/blog/AluminioAeroespacial';
+import EntrenamientoReducidos from './pages/blog/EntrenamientoReducidos';
 import ScrollToTop from './components/ScrollToTop';
 
 export default function App() {
@@ -25,6 +29,10 @@ export default function App() {
               <Route path="/galeria" element={<Galeria />} />
               <Route path="/personalizacion" element={<Personalizacion />} />
               <Route path="/contacto" element={<Contacto />} />
+              <Route path="/blog" element={<Blog />} />
+              <Route path="/blog/como-elegir-porteria-futbol" element={<ComoElegirPorteria />} />
+              <Route path="/blog/aluminio-aeroespacial-porterias" element={<AluminioAeroespacial />} />
+              <Route path="/blog/entrenamiento-espacios-reducidos-futbol" element={<EntrenamientoReducidos />} />
             </Routes>
           </main>
           <Footer />
