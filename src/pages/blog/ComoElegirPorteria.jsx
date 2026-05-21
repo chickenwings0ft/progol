@@ -52,6 +52,8 @@ export default function ComoElegirPorteria() {
               La primera gran duda al equipar un campo es la dimensión. El tamaño de la portería afecta directamente a la psicología y a la técnica del jugador. Si la meta es demasiado grande, el portero se frustra; si es muy pequeña, los delanteros no marcan. A continuación, repasamos qué dimensiones exige cada etapa.
             </p>
 
+            <img src="/Imagenes/blog-porteria-entrenamiento.png" alt="Elección de tamaño de portería de entrenamiento" style={{ width: '100%', height: 'auto', borderRadius: 8, margin: '32px 0 40px', boxShadow: '0 4px 20px rgba(0,0,0,0.08)' }} />
+
             <h3 style={{ fontSize: 20, color: '#111', fontWeight: 800, margin: '30px 0 16px' }}>Fútbol 11 (A partir de 14 años y Senior)</h3>
             <p style={{ marginBottom: 20 }}>
               Las porterías oficiales de Fútbol 11 miden 7,32 metros de ancho por 2,44 metros de alto. Este es el formato estándar para partidos de liga y competiciones oficiales en categorías de cadete en adelante.
@@ -80,6 +82,8 @@ export default function ComoElegirPorteria() {
             <p style={{ marginBottom: 20 }}>
               El material es el factor más importante a la hora de determinar cuánto va a durar tu inversión. Existen tres grandes opciones en el mercado, pero solo una está diseñada para el rigor del uso diario.
             </p>
+
+            <img src="/Imagenes/blog-aluminio-aeroespacial.png" alt="Detalle de portería de aluminio aeroespacial" style={{ width: '100%', height: 'auto', borderRadius: 8, margin: '32px 0 40px', boxShadow: '0 4px 20px rgba(0,0,0,0.08)' }} />
 
             <h3 style={{ fontSize: 20, color: '#111', fontWeight: 800, margin: '30px 0 16px' }}>1. Porterías de PVC (Plástico)</h3>
             <p style={{ marginBottom: 20 }}>
