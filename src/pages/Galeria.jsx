@@ -6,6 +6,11 @@ import FAQ from '../components/FAQ';
 import Contact from '../components/Contact';
 
 const images = [
+  { src: '/Imagenes/training-sunny.png', alt: 'ProGoal Sports - Sunny Training' },
+  { src: '/Imagenes/training-action.png', alt: 'ProGoal Sports - Action Shot' },
+  { src: '/Imagenes/training-night.png', alt: 'ProGoal Sports - Night Training' },
+  { src: '/Imagenes/training-coach.png', alt: 'ProGoal Sports - Coach Perspective' },
+  { src: '/Imagenes/training-lowangle.png', alt: 'ProGoal Sports - Low Angle Shot' },
   { src: '/Imagenes/ProGoal Sports porterias (1).jpeg',  alt: 'ProGoal Sports' },
   { src: '/Imagenes/ProGoal Sports porterias (2).jpeg',  alt: 'ProGoal Sports' },
   { src: '/Imagenes/ProGoal Sports porterias (6).jpeg',  alt: 'ProGoal Sports' },
