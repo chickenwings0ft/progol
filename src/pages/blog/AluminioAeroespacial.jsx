@@ -3,6 +3,18 @@ import { ArrowRight } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 export default function AluminioAeroespacial() {
+
+  const scrollToId = (e, id) => {
+    e.preventDefault();
+    const element = document.getElementById(id);
+    if (element) {
+      window.scrollTo({
+        top: element.offsetTop - 100,
+        behavior: 'smooth'
+      });
+    }
+  };
+
   return (
     <article>
       {/* Blog Header */}
@@ -21,33 +33,49 @@ export default function AluminioAeroespacial() {
         </div>
       </div>
 
-      {/* Blog Content */}
+      {/* Blog Content with TOC */}
       <section style={{ background: '#fff', padding: '60px 0' }}>
-        <div className="container" style={{ maxWidth: 800 }}>
+        <div className="container blog-layout">
           
-          <div style={{ fontSize: 15, color: '#444', lineHeight: 1.9, fontWeight: 500 }}>
-            <p style={{ marginBottom: 20 }}>
-              Tradicionalmente, las porterías de entrenamiento se fabricaban en acero (muy pesadas y propensas al óxido) o en PVC (ligeras pero extremadamente frágiles ante los balonazos). Hoy en día, la industria del equipamiento deportivo ha evolucionado hacia las <strong>aleaciones de aluminio</strong>, concretamente las de grado aeroespacial.
+          {/* Floating TOC Sidebar */}
+          <aside className="blog-sidebar">
+            <div className="toc-title">Índice del Artículo</div>
+            <nav>
+              <a href="#ratio" onClick={(e) => scrollToId(e, 'ratio')} className="toc-link">1. Ratio Resistencia / Peso</a>
+              <a href="#corrosion" onClick={(e) => scrollToId(e, 'corrosion')} className="toc-link">2. Resistencia a la Corrosión</a>
+              <a href="#seguridad" onClick={(e) => scrollToId(e, 'seguridad')} className="toc-link">3. Seguridad Activa</a>
+              <a href="#estabilidad" onClick={(e) => scrollToId(e, 'estabilidad')} className="toc-link">4. Estabilidad Estructural</a>
+            </nav>
+          </aside>
+
+          {/* Main Content */}
+          <div className="blog-content" style={{ fontSize: 16, color: '#444', lineHeight: 1.9, fontWeight: 500 }}>
+            <p style={{ marginBottom: 40 }}>
+              Tradicionalmente, las porterías de entrenamiento se fabricaban en acero (muy pesadas y propensas al óxido) o en PVC (ligeras pero extremadamente frágiles ante los balonazos). Hoy en día, la industria del equipamiento deportivo ha evolucionado hacia las <strong>aleaciones de aluminio</strong>, concretamente las de <strong>grado aeroespacial</strong>.
             </p>
 
-            <h2 style={{ fontSize: 24, color: '#111', fontWeight: 800, margin: '40px 0 20px' }}>1. Ratio Resistencia / Peso inigualable</h2>
+            <img src="/Imagenes/blog-aluminio-aeroespacial.png" alt="Detalle de la estructura de aluminio" style={{ width: '100%', height: 'auto', borderRadius: 8, margin: '0 0 40px', boxShadow: '0 4px 20px rgba(0,0,0,0.08)' }} />
+
+            <h2 id="ratio" style={{ fontSize: 24, color: '#111', fontWeight: 800, margin: '40px 0 20px', scrollMarginTop: 100 }}>1. Ratio Resistencia / Peso inigualable</h2>
             <p style={{ marginBottom: 20 }}>
-              El aluminio de grado aeroespacial ofrece una resistencia estructural similar al acero, pero pesando apenas una fracción del mismo. Esto permite que una portería como la ProGol (con un tubo de 50mm de grosor) sea robusta frente a impactos de balón a más de 100 km/h, pero lo suficientemente ligera como para que un solo entrenador la desplace por el césped sin esfuerzo.
+              El aluminio de grado aeroespacial ofrece una <strong>resistencia estructural similar al acero</strong>, pero pesando apenas una fracción del mismo. Esto permite que una portería como la ProGol (con un tubo de 50mm de grosor) sea robusta frente a <strong>impactos de balón a más de 100 km/h</strong>, pero lo suficientemente ligera como para que un solo entrenador la desplace por el césped sin esfuerzo.
             </p>
 
-            <h2 style={{ fontSize: 24, color: '#111', fontWeight: 800, margin: '40px 0 20px' }}>2. 100% Resistente a la Corrosión</h2>
+            <h2 id="corrosion" style={{ fontSize: 24, color: '#111', fontWeight: 800, margin: '40px 0 20px', scrollMarginTop: 100 }}>2. 100% Resistente a la Corrosión</h2>
             <p style={{ marginBottom: 20 }}>
-              El material de entrenamiento pasa miles de horas a la intemperie soportando lluvia, nieve, rocío matutino y, en el caso del fútbol playa, salitre. A diferencia del hierro o el acero que terminan oxidándose y requiriendo mantenimiento constante, el aluminio genera de forma natural una fina capa de óxido que sella el metal y lo protege de por vida contra la corrosión.
+              El material de entrenamiento pasa miles de horas a la intemperie soportando lluvia, nieve, rocío matutino y, en el caso del fútbol playa, salitre. A diferencia del hierro o el acero que terminan oxidándose y requiriendo mantenimiento constante, el aluminio genera de forma natural una <strong>fina capa de óxido que sella el metal y lo protege de por vida contra la corrosión</strong>.
             </p>
 
-            <h2 style={{ fontSize: 24, color: '#111', fontWeight: 800, margin: '40px 0 20px' }}>3. Seguridad Activa para los Jugadores</h2>
+            <h2 id="seguridad" style={{ fontSize: 24, color: '#111', fontWeight: 800, margin: '40px 0 20px', scrollMarginTop: 100 }}>3. Seguridad Activa para los Jugadores</h2>
             <p style={{ marginBottom: 20 }}>
-              Las colisiones contra los postes son inevitables en el fragor del juego. Una portería de acero rígido no absorbe energía, transmitiendo todo el impacto al jugador. Las aleaciones de aluminio premium tienen una ligerísima capacidad de flexión que absorbe parte del choque, reduciendo drásticamente el riesgo de lesiones graves, especialmente en categorías de formación.
+              Las colisiones contra los postes son inevitables en el fragor del juego. Una portería de acero rígido no absorbe energía, transmitiendo todo el impacto al jugador. Las aleaciones de aluminio premium tienen una <strong>ligerísima capacidad de flexión</strong> que absorbe parte del choque, <strong>reduciendo drásticamente el riesgo de lesiones graves</strong>, especialmente en categorías de formación.
             </p>
 
-            <h2 style={{ fontSize: 24, color: '#111', fontWeight: 800, margin: '40px 0 20px' }}>4. Estabilidad Estructural bajo Carga</h2>
+            <img src="/Imagenes/training-drone-2.png" alt="Entrenamiento con porterías de aluminio" style={{ width: '100%', height: 'auto', borderRadius: 8, margin: '32px 0 40px', boxShadow: '0 4px 20px rgba(0,0,0,0.08)' }} />
+
+            <h2 id="estabilidad" style={{ fontSize: 24, color: '#111', fontWeight: 800, margin: '40px 0 20px', scrollMarginTop: 100 }}>4. Estabilidad Estructural bajo Carga</h2>
             <p style={{ marginBottom: 20 }}>
-              Nuestro equipo de ingeniería sometió los travesaños de aluminio 50mm de ProGol a pruebas de carga extrema. El resultado demostró que el aluminio aeroespacial soporta más de <strong>100 kg de peso estático</strong> sin pandearse ni sufrir deformaciones permanentes.
+              Nuestro equipo de ingeniería sometió los travesaños de aluminio 50mm de ProGol a pruebas de carga extrema. El resultado demostró que el aluminio aeroespacial soporta <strong>más de 100 kg de peso estático</strong> sin pandearse ni sufrir deformaciones permanentes.
             </p>
 
             {/* CTA Box */}
