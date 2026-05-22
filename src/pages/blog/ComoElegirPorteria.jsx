@@ -43,6 +43,7 @@ export default function ComoElegirPorteria() {
           
           <div style={{ fontSize: 16, color: '#444', lineHeight: 1.9, fontWeight: 500 }}>
             
+            <h2 style={{ fontSize: 28, color: '#111', fontWeight: 900, margin: '0 0 20px' }}>¿Como elegir la mejor portería?</h2>
             <p style={{ marginBottom: 40 }}>
               Elegir el equipamiento correcto va mucho más allá de tener dos postes y una red. Para las academias deportivas, el campo de entrenamiento es una zona de alto rendimiento. Necesitas herramientas que ahorren tiempo a tus entrenadores, que protejan a los jugadores y que duren años sin oxidarse. A continuación, desglosamos todo lo que necesitas saber para tomar la decisión definitiva.
             </p>
