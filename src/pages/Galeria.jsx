@@ -6,6 +6,8 @@ import FAQ from '../components/FAQ';
 import Contact from '../components/Contact';
 
 const images = [
+  { src: '/Imagenes/training-drone-1.png', alt: 'ProGoal Sports - Drone Aerial Training 1' },
+  { src: '/Imagenes/training-drone-2.png', alt: 'ProGoal Sports - Drone Aerial Training 2' },
   { src: '/Imagenes/training-sunny.png', alt: 'ProGoal Sports - Sunny Training' },
   { src: '/Imagenes/training-action.png', alt: 'ProGoal Sports - Action Shot' },
   { src: '/Imagenes/training-night.png', alt: 'ProGoal Sports - Night Training' },
